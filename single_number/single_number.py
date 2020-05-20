@@ -4,8 +4,12 @@ Returns: an integer
 '''
 def single_number(arr):
     # Your code here
+    arr.sort()
+    for i in range(len(arr)):
+        if arr[i] != arr[i+1] and arr[i] != arr[i-1]:
+            return arr[i]
 
-    pass
+    # return 'None'
 
 
 if __name__ == '__main__':
